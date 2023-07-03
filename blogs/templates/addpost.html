@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>Добавить запись</h1>
+    <hr>
+
+    <form action="{% url 'addpost' %}" method="post" enctype="multipart/form-data">
+        {{ form }}
+        {% csrf_token %}
+        <button type="submit">Подтвердить</button>
+    </form>
+
+
+{% endblock %}

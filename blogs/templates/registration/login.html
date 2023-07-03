@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>Авторизация</h1>
+    <hr>
+
+    {% if form.errors %}
+        <p>Неверный логин или пароль!</p>
+    {% endif %}
+
+    <form action="{% url 'login' %}" method="post">
+        {{ form }}
+        {% csrf_token %}
+        <button type="submit">Подтвердить</button>
+    </form>
+
+{% endblock %}

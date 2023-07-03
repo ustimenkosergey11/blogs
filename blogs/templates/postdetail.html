@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container">
+    <img src="{{ post.img.url }}" width="400px">
+    <h1>{{ post.title }}</h1>
+    <h4>{{ post.description }}</h4>
+    <h4>От: {{ post.author }}</h4>
+    <h3>{{ post.date }}</h3>
+</div>
+
+
+{% endblock %}
